@@ -1,0 +1,22 @@
+@use "../../styles/_variables.scss" as *;
+@use "../../styles/_mixins.scss" as *;
+
+.page {
+    min-height: 100vh;
+    padding: $space-8 $space-4;
+    background-color: $background;
+
+    h1 {
+        font-family: $font-heading;
+        font-size: 3rem;
+        font-weight: 700;
+        color: $foreground;
+        margin-bottom: $space-8;
+        text-align: center;
+
+        @include md {
+            font-size: 3.5rem;
+            margin-bottom: $space-12;
+        }
+    }
+}

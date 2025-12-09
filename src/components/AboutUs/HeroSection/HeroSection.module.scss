@@ -1,0 +1,60 @@
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_mixins.scss" as *;
+
+.hero {
+  padding: $space-12 $space-4;
+
+  @include md {
+    padding: $space-20 $space-12;
+  }
+}
+
+.container {
+  @include container;
+}
+
+.content {
+  max-width: 48rem;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: $space-4;
+}
+
+.accent {
+  width: 4px;
+  height: 6rem;
+  background-color: $primary;
+  margin-top: $space-1;
+  flex-shrink: 0;
+}
+
+.label {
+  color: $muted-foreground;
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+  font-weight: 500;
+  margin-bottom: $space-2;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-family: $font-heading;
+  font-weight: 700;
+  color: $secondary;
+  line-height: 1.1;
+
+  @include md {
+    font-size: 2.25rem;
+  }
+}
+
+.description {
+  margin-top: $space-8;
+  color: hsla(222, 47%, 11%, 0.8);
+  line-height: 1.7;
+  font-size: 1.125rem;
+  max-width: 42rem;
+}

@@ -1,0 +1,90 @@
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_mixins.scss" as *;
+
+.section {
+    padding: $space-12 $space-6;
+
+    @include md {
+        padding: $space-24 $space-12;
+    }
+}
+
+.container {
+    @include container;
+}
+
+.pageTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $foreground;
+    font-family: $font-heading;
+    margin-bottom: $space-6;
+
+    @include md {
+        font-size: 2.5rem;
+    }
+}
+
+.pageDescription {
+    font-size: 1.125rem;
+    color: $muted-foreground;
+    margin-bottom: $space-16;
+    line-height: 1.6;
+}
+
+.programsGrid {
+    display: grid;
+    gap: $space-8;
+    grid-template-columns: 1fr;
+
+    @include md {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space-12;
+    }
+
+    @include lg {
+        grid-template-columns: 1fr;
+        gap: $space-10;
+    }
+}
+
+.programCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $space-6 $space-8;
+    background: $card;
+    border: 1px solid $border;
+    border-radius: $radius-lg;
+    text-decoration: none;
+    transition: all $transition-default;
+    cursor: pointer;
+
+    &:hover {
+        border-color: $accent;
+        box-shadow: $shadow-card-hover;
+        transform: translateX($space-2);
+
+        h3 {
+            color: $accent;
+        }
+    }
+
+    h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $foreground;
+        margin: 0;
+        transition: color $transition-fast;
+    }
+}
+
+.arrow {
+    font-size: 1.5rem;
+    color: $accent;
+    transition: transform $transition-fast;
+
+    .programCard:hover & {
+        transform: translateX($space-2);
+    }
+}

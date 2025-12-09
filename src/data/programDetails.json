@@ -1,0 +1,217 @@
+{
+    "undergraduate": {
+        "bba": {
+            "id": "bba",
+            "title": "The Bachelor of Business Administration",
+            "category": "undergraduate",
+            "subtitle": "The Bachelor of Business Administration",
+            "image": "/images/program-bba.jpg",
+            "description": "The Bachelor of Business Administration (Top-Up) is a one-year final-stage program designed for students who already hold a Level 5 qualification or equivalent diploma and wish to complete a full bachelor's degree.",
+            "fullDescription": "This program focuses on advanced business concepts, strategic thinking, leadership, and real-world professional skills. It provides a direct pathway for students to upgrade their current qualification to an internationally recognized BBA degree — with the flexibility and affordability that LAMS is known for.",
+            "sections": {
+                "overview": {
+                    "title": "Who Is This Programme For?",
+                    "content": [
+                        "This Top-Up programme is ideal for:",
+                        "Students with a Level 5 Diploma, HND, or Associate Degree",
+                        "Learners seeking to complete their bachelor's degree in just one year",
+                        "Working professionals needing a flexible and cost-effective progression route",
+                        "International students who require a globally recognised qualification for career or postgraduate study (e.g., MBA)"
+                    ]
+                },
+                "structure": {
+                    "title": "Program Structure",
+                    "content": [
+                        "Leadership and People Management",
+                        "Operations Management",
+                        "Financial Decision Making",
+                        "Sustainable Business Practices",
+                        "Strategic Human Resource Management",
+                        "Business Research Project",
+                        "Final Project"
+                    ]
+                },
+                "outcomes": {
+                    "title": "Learning Outcomes",
+                    "content": [
+                        "Apply strategic and analytical thinking to complex business problems",
+                        "Demonstrate leadership, communication, and decision-making skills",
+                        "Understand global markets and international business trends",
+                        "Conduct research and present a professional business project",
+                        "Progress toward postgraduate studies such as an MBA or relevant Master’s degrees"
+                    ]
+                },
+                "requirements": {
+                    "title": "Academic Requirements",
+                    "content": [
+                        "Level 5 Diploma in Business (or related field)",
+                        "Higher National Diploma (HND) in Business or equivalent",
+                        "International Diploma / Associate Degree equivalent to 2 years of undergraduate study",
+                        "Additional requirements",
+                        "Official transcripts",
+                        "Statement of purpose",
+                        "Updated CV for mature-entry applicants"
+                    ]
+                },
+                "english": {
+                    "title": "English Language Requirements",
+                    "content": [
+                        "IELTS Academic 6.0 (minimum 5.5 in each band)",
+                        "TOEFL iBT 70",
+                        "PTE Academic 50",
+                        "LAMS Placement Test",
+                        "Proof of previous study in English (subject to verification)"
+                    ]
+                }
+            }
+        }
+    },
+    "postgraduate": {
+        "mba": {
+            "id": "mba",
+            "title": "The Master of Business Administration",
+            "category": "postgraduate",
+            "subtitle": "The Master of Business Administration",
+            "image": "/images/program-mba.jpg",
+            "description": "The Master of Business Administration (MBA) is a one- to two-year advanced programme designed for students who already hold an undergraduate degree in business, management, or a related field. This programme emphasizes leadership, strategic management, innovation, and evidence-based decision-making. It prepares students for senior management and executive roles in a variety of industries, providing a pathway to globally recognised qualifications with the flexibility and affordability that LAMS is known for.",
+            "sections": {
+                "overview": {
+                    "title": "Who Is This Programme For?",
+                    "content": [
+                        "This MBA programme is ideal for:",
+                        "Graduates holding a bachelor’s degree in business, management, or a related discipline",
+                        "Professionals seeking to accelerate their career into leadership or executive roles",
+                        "Working managers looking for a flexible learning option while continuing employment",
+                        "International students aiming for a globally recognised qualification to advance their careers or pursue doctoral studies",
+                        "Individuals planning to work in strategic, operational, or managerial positions across corporate, public, or entrepreneurial settings"
+                    ]
+                },
+                "structure": {
+                    "title": "Program Structure",
+                    "content": [
+                        "Students complete advanced-level modules such as:",
+                        "Strategic Management",
+                        "Strategic Leadership",
+                        "Strategic Human Resource Management",
+                        "Globalisation and Corporate Governance",
+                        "Strategic Financial Management",
+                        "Advanced Business Research Methods",
+                        "Work-based Project"
+                    ]
+                },
+                "outcomes": {
+                    "title": "Learning Outcomes",
+                    "content": [
+                        "By the end of the MBA programme, students will be able to:",
+                        "Apply advanced leadership, management, and decision-making principles in diverse business contexts",
+                        "Understand global business trends, corporate governance, and regulatory frameworks",
+                        "Develop innovative strategies for sustainable business growth and competitive advantage",
+                        "Analyse organisational performance, operational efficiency, and market dynamics",
+                        "Conduct applied research and present professional business solutions",
+                        "Progress toward doctoral-level studies such as DBA or PhD in Business Administration"
+                    ]
+                },
+                "requirements": {
+                    "title": "Academic Requirements",
+                    "content": [
+                        "Applicants must meet one of the following entry criteria:",
+                        "Bachelor’s degree in Business, Management, or a related field",
+                        "International undergraduate degree equivalent to a UK bachelor’s degree",
+                        "Relevant professional qualifications with substantial managerial experience (for mature-entry applicants)",
+                        "Additional requirements:",
+                        "Official transcripts",
+                        "Statement of purpose",
+                        "Updated CV for mature-entry applicants",
+                        "References (academic or professional)"
+                    ]
+                },
+                "language_requirements": {
+                    "title": "English Language Requirements",
+                    "content": [
+                        "Students must provide one of the following:",
+                        "IELTS Academic 6.5 (minimum 6.0 in each band)",
+                        "TOEFL iBT 80",
+                        "PTE Academic 58",
+                        "LAMS Placement Test",
+                        "Proof of previous study in English (subject to verification)"
+                    ]
+                }
+            }
+        }
+    },
+    "doctorate": {
+        "dba": {
+            "id": "dba",
+            "title": "The Doctor of Business Administration",
+            "category": "doctorate",
+            "subtitle": "The Doctor of Business Administration",
+            "image": "/images/program-dba.jpg",
+            "description": "The Doctor of Business Administration (DBA) is a two- to five-year advanced professional doctoral programme designed for experienced managers, executives, entrepreneurs, and professionals who already hold a master’s degree in business, management, or a related field. This programme emphasizes strategic leadership, organisational transformation, applied research, and evidence-based decision-making at the highest level. It prepares candidates for senior executive roles, academic careers, consultancy, and thought leadership, offering a pathway to globally recognised doctoral qualifications with the flexibility and affordability that LAMS is known for.",
+            "sections": {
+                "overview": {
+                    "title": "Who Is This Programme For?",
+                    "content": [
+                        "This DBA programme is ideal for:",
+                        "Graduates holding a master’s degree in business, management, or a related discipline.",
+                        "Senior professionals seeking to advance into executive leadership, consultancy, or organisational development roles.",
+                        "Academics or lecturers aiming to enhance their research credentials and career prospects.",
+                        "Entrepreneurs looking to combine practical business insight with advanced research capabilities.",
+                        "Individuals planning to contribute to strategic, organisational, or policy-level decision-making at corporate, governmental, or international levels."
+                    ]
+                },
+                "structure": {
+                    "title": "Program Structure",
+                    "content": [
+                        "Students complete advanced doctoral-level modules such as:",
+                        "Developing Strategic Management and Leadership Potential.",
+                        "Managing Strategic Change.",
+                        "Project Development, Planning and Management.",
+                        "Advanced Research Design and Methodologies.",
+                        "Developing Research Capability.",
+                        "Strategic Financial Management.",
+                        "Entrepreneurship and Innovation.",
+                        "Globalisation and Corporate Governance.",
+                        "Dissertation."
+                    ]
+                },
+                "outcomes": {
+                    "title": "Learning Outcomes",
+                    "content": [
+                        "By the end of the DBA programme, students will be able to:",
+                        "Demonstrate advanced leadership, strategic analysis, and organisational development capabilities.",
+                        "Understand global business dynamics, governance frameworks, and emerging management trends.",
+                        "Develop innovative, research-based solutions to complex business and organisational challenges.",
+                        "Analyse strategic, financial, operational, and market performance at an executive level.",
+                        "Design and conduct applied research that contributes to professional practice and organisational improvement.",
+                        "Progress toward academic careers or senior executive roles as research-informed leaders."
+                    ]
+                },
+                "requirements": {
+                    "title": "Academic Requirements",
+                    "content": [
+                        "Applicants must meet one of the following entry criteria:",
+                        "Bachelor’s degree in Business, Management, or a related field",
+                        "International undergraduate degree equivalent to a UK bachelor’s degree",
+                        "Relevant professional qualifications with substantial managerial experience (for mature-entry applicants)",
+                        "Additional requirements:",
+                        "Official transcripts",
+                        "Statement of purpose",
+                        "Updated CV for mature-entry applicants",
+                        "References (academic or professional)"
+                    ]
+                },
+                "language_requirements": {
+                    "title": "English Language Requirements",
+                    "content": [
+                        "Students must provide one of the following:",
+                        "IELTS Academic 6.5 (minimum 6.0 in each band)",
+                        "TOEFL iBT 80",
+                        "PTE Academic 58",
+                        "LAMS Placement Test",
+                        "Proof of previous study in English (subject to verification)"
+                    ]
+                }
+            }
+        }
+    }
+}

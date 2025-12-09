@@ -1,0 +1,76 @@
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_mixins.scss" as *;
+
+.section {
+    padding: $space-16 $space-6;
+
+    @include md {
+        padding: $space-24 $space-12;
+    }
+}
+
+.container {
+    @include container;
+}
+
+.grid {
+    display: grid;
+    gap: $space-12;
+    align-items: center;
+
+    @include md {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.label {
+    color: $muted-foreground;
+    font-size: 0.875rem;
+    letter-spacing: 0.025em;
+    font-weight: 500;
+    margin-bottom: $space-2;
+}
+
+.title {
+    font-size: 1.875rem;
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $secondary;
+    margin-bottom: $space-6;
+
+    @include md {
+        font-size: 2.25rem;
+    }
+}
+
+.description {
+    color: hsla(222, 47%, 11%, 0.8);
+    line-height: 1.7;
+    margin-bottom: $space-8;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary;
+    color: $primary-foreground;
+    padding: $space-3 $space-8;
+    font-weight: 500;
+    font-family: $font-body;
+    border: none;
+    cursor: pointer;
+    transition: background-color $transition-default;
+
+    &:hover {
+        background-color: $gold-dark;
+    }
+}
+
+.imageWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    overflow: hidden;
+    border-radius: $radius-lg;
+}

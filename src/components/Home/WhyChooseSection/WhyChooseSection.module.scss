@@ -1,0 +1,203 @@
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_mixins.scss" as *;
+
+.section {
+    padding: $space-20 $space-4;
+    background: $secondary;
+    color: $secondary-foreground;
+}
+
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+}
+
+.content {
+    display: flex;
+     flex-direction: column-reverse;
+    gap: $space-12;
+    align-items: center;
+
+    @include md {
+        flex-direction: row-reverse;
+        gap: $space-8;
+    }
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: $space-8;
+}
+
+
+
+.title {
+    font-family: $font-heading;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $secondary-foreground;
+    margin: 0;
+    line-height: 1.2;
+
+    @include md {
+        font-size: 2rem;
+    }
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba($secondary-foreground, 0.85);
+    margin: 0;
+}
+
+.reasons {
+    display: flex;
+    flex-direction: column;
+    gap: $space-6;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: $space-4;
+    align-items: flex-start;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: $primary;
+    flex-shrink: 0;
+    padding-top: $space-1;
+}
+
+.text {
+    h4 {
+        font-family: $font-heading;
+        font-size: 1rem;
+        font-weight: 600;
+        color: $secondary-foreground;
+        margin: 0 0 $space-1 0;
+    }
+
+    p {
+        font-size: 0.9rem;
+        color: rgba($secondary-foreground, 0.8);
+        margin: 0;
+        line-height: 1.5;
+    }
+}
+
+.btn {
+    align-self: flex-start;
+    padding: $space-3 $space-6;
+    background: $primary;
+    color: $primary-foreground;
+    border-radius: $radius-lg;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all $transition-default;
+    font-size: 0.95rem;
+
+    &:hover {
+        background: $accent;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba($primary, 0.3);
+    }
+}
+
+
+.arrowRight {
+    margin-left: $space-2;
+    font-size: 0.85rem;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    background: rgba($secondary-foreground, 0.05);
+    border: 1px solid rgba($secondary-foreground, 0.1);
+    padding: $space-8;
+    border-radius: $radius-lg;
+    backdrop-filter: blur(10px);
+
+    h3 {
+        font-family: $font-heading;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $secondary-foreground;
+        margin: 0 0 $space-4 0;
+    }
+
+    p {
+        font-size: 0.9rem;
+        color: rgba($secondary-foreground, 0.8);
+        line-height: 1.6;
+        margin: 0 0 $space-8 0;
+    }
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $space-6;
+    margin-bottom: $space-12;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: $space-4;
+    background: rgba($primary, 0.1);
+    border-radius: $radius-md;
+}
+
+.number {
+    font-family: $font-heading;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $primary;
+    line-height: 1;
+    margin-bottom: $space-2;
+}
+
+.label {
+    font-size: 0.85rem;
+    color: rgba($secondary-foreground, 0.7);
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: $space-12 $space-4;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        gap: $space-8;
+    }
+
+    .right {
+        order: -1;
+        min-width: 350px;
+    }
+
+    .card {
+        padding: $space-6;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}

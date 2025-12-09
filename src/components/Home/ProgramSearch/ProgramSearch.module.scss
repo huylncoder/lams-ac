@@ -1,0 +1,214 @@
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_mixins.scss" as *;
+
+.section {
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-12 $space-4;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/accessible.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+}
+
+.title {
+    font-family: $font-heading;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: $primary-foreground;
+    margin: 0 0 $space-12 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    @include md {
+        font-size: 2.5rem;
+        margin-bottom: $space-8;
+    }
+}
+
+.searchBox {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    background: $primary-foreground;
+    border-radius: 50px;
+    padding: $space-2;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+
+    @include md {
+        flex-direction: row;
+        border-radius: $radius-lg;
+        gap: $space-3;
+        padding: $space-3;
+    }
+}
+
+.input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: $space-4 $space-6;
+    font-size: 1rem;
+    color: $foreground;
+    outline: none;
+
+    &::placeholder {
+        color: rgba($foreground, 0.5);
+    }
+
+    @include md {
+        padding: $space-3 $space-4;
+        font-size: 0.95rem;
+    }
+}
+
+.selectWrapper {
+    position: relative;
+    flex: 0 1 250px;
+    z-index: 1001;
+
+    @include md {
+        flex: 1;
+    }
+}
+
+.selectButton {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: $space-4 $space-6;
+    font-size: 1rem;
+    color: $foreground;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+    transition: all $transition-default;
+
+    &:hover {
+        background: rgba($foreground, 0.05);
+    }
+
+    @include md {
+        padding: $space-3 $space-4;
+        font-size: 0.95rem;
+    }
+}
+
+.selectText {
+    font-weight: 500;
+}
+
+
+.dropdown {
+    position: absolute;
+    top: 84%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-radius: $radius-md;
+    margin-top: $space-2;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 1002;
+    min-width: 100%;
+}
+
+.option {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: $space-3 $space-6;
+    text-align: left;
+    color: #000;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all $transition-default;
+    outline: none;
+
+    &:hover {
+        background: $primary;
+        padding-left: $space-8;
+    }
+
+    &:not(:last-child) {
+        border-bottom: 1px solid rgba($primary-foreground, 0.1);
+    }
+}
+
+.btn {
+    flex: 0 0 auto;
+    background: $primary;
+    color: $primary-foreground;
+    border: none;
+    padding: $space-3 $space-8;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all $transition-default;
+    letter-spacing: 1px;
+    white-space: nowrap;
+
+    &:hover {
+        background: $accent;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba($primary, 0.3);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    @include md {
+        padding: $space-3 $space-6;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        min-height: 450px;
+        padding: $space-8 $space-4;
+    }
+
+    .title {
+        font-size: 2rem;
+        margin-bottom: $space-6;
+    }
+
+    .searchBox {
+        flex-direction: column;
+    }
+
+    .selectWrapper {
+        flex: 1;
+    }
+}

@@ -1,0 +1,118 @@
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_mixins.scss" as *;
+
+.footer {
+    background: $secondary;
+    color: $secondary-foreground;
+    padding: $space-12 $space-4;
+}
+
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $space-8;
+    margin-bottom: $space-8;
+}
+
+.section {
+    h3 {
+        font-family: $font-heading;
+        font-size: 1.1rem;
+        margin-bottom: $space-3;
+        color: $secondary-foreground;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: $space-2;
+        opacity: 0.9;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: $space-2;
+
+            a {
+                color: rgba($secondary-foreground, 0.8);
+                transition: color $transition-default;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+.socials {
+    display: flex;
+    gap: $space-3;
+    margin-top: $space-3;
+
+    a {
+        color: rgba($secondary-foreground, 0.8);
+        font-size: 1.2rem;
+        transition: color $transition-default;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.bottom {
+    border-top: 1px solid rgba($secondary-foreground, 0.1);
+    padding-top: $space-6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: $space-4;
+
+    p {
+        margin: 0;
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+}
+
+.links {
+    display: flex;
+    gap: $space-4;
+
+    a {
+        color: rgba($secondary-foreground, 0.8);
+        font-size: 0.9rem;
+        transition: color $transition-default;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: $space-8 $space-4;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: $space-6;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,119 @@
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_mixins.scss" as *;
+
+.section {
+    padding: $space-20 $space-4;
+    background: $muted;
+}
+
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+}
+
+.title {
+    font-family: $font-heading;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: $space-12;
+    color: $foreground;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $space-6;
+    margin-bottom: $space-12;
+}
+
+.card {
+    background: $card;
+    border-radius: $radius-lg;
+    @include card-elevated;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .image {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.05));
+    }
+
+    .content {
+        padding: $space-6;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .meta {
+        font-size: 0.85rem;
+        color: $muted-foreground;
+        margin-bottom: $space-3;
+    }
+
+    h3 {
+        font-family: $font-heading;
+        font-size: 1.2rem;
+        margin-bottom: $space-3;
+        color: $foreground;
+        line-height: 1.4;
+        font-weight: 700;
+    }
+
+    p {
+        color: $muted-foreground;
+        line-height: 1.6;
+        margin-bottom: $space-4;
+        flex: 1;
+    }
+}
+
+.link {
+    color: $primary;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color $transition-default;
+
+    &:hover {
+        color: $accent;
+    }
+}
+
+.btn {
+    @include button-base;
+    background: $primary;
+    color: $primary-foreground;
+    padding: $space-3 $space-8;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: $space-12 $space-4;
+    }
+
+    .title {
+        font-size: 2rem;
+        margin-bottom: $space-8;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        margin-bottom: $space-8;
+    }
+
+    .card {
+        .image {
+            height: 180px;
+        }
+
+        .content {
+            padding: $space-4;
+        }
+    }
+}

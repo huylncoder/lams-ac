@@ -1,0 +1,7 @@
+node_modules
+.next
+.qodo
+dist
+out
+*.log
+coverage

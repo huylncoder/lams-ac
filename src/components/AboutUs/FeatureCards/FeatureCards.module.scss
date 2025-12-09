@@ -1,0 +1,64 @@
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_mixins.scss" as *;
+
+.section {
+  padding: $space-12 $space-6;
+
+  @include md {
+    padding: $space-12;
+  }
+}
+
+.container {
+  @include container;
+}
+
+.grid {
+  display: grid;
+  gap: $space-6;
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background-color: $card;
+  padding: $space-6;
+  border-left: 4px solid $primary;
+  transition: all $transition-default;
+
+  @include md {
+    padding: $space-8;
+  }
+
+  &:hover {
+    box-shadow: $shadow-card-hover;
+  }
+}
+
+.number {
+  font-size: 3rem;
+  font-family: $font-heading;
+  font-weight: 700;
+  color: $secondary;
+  opacity: 0.9;
+
+  @include md {
+    font-size: 3.75rem;
+  }
+}
+
+.title {
+  font-size: 1.25rem;
+  font-family: $font-heading;
+  font-weight: 700;
+  color: $secondary;
+  margin-top: $space-4;
+  margin-bottom: $space-3;
+}
+
+.description {
+  color: hsla(222, 47%, 11%, 0.75);
+  line-height: 1.7;
+}

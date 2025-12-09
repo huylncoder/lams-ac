@@ -1,0 +1,121 @@
+@use 'variables' as *;
+
+// Responsive breakpoints
+@mixin sm {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: $breakpoint-2xl) {
+    @content;
+  }
+}
+
+// Container
+@mixin container {
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
+
+// Flex utilities
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Card elevated effect
+@mixin card-elevated {
+  box-shadow: $shadow-card;
+  transition: all $transition-default;
+  
+  &:hover {
+    box-shadow: $shadow-card-hover;
+    transform: translateY(-4px);
+  }
+}
+
+// Button base
+@mixin button-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  border-radius: $radius-md;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: $font-body;
+  transition: all $transition-default;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  
+  &:focus-visible {
+    outline: 2px solid $ring;
+    outline-offset: 2px;
+  }
+  
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+// Animations
+@mixin fade-up($duration: 0.6s, $delay: 0s) {
+  animation: fadeUp $duration ease-out $delay forwards;
+}
+
+@mixin fade-in($duration: 0.8s, $delay: 0s) {
+  animation: fadeIn $duration ease-out $delay forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

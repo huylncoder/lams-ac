@@ -1,0 +1,166 @@
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_mixins.scss" as *;
+
+.hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: -3rem;;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: $gradient-hero-overlay;
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 $container-padding;
+    text-align: center;
+}
+
+.content {
+    animation: fadeUp 0.8s ease-out forwards;
+}
+
+.title {
+    font-family: $font-heading;
+    font-size: 4rem;
+    font-weight: 700;
+    color: $primary-foreground;
+    margin: 0 0 $space-6 0;
+    letter-spacing: -2px;
+
+    @include md {
+        font-size: 5.5rem;
+    }
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: rgba($primary-foreground, 0.95);
+    margin: 0 0 $space-8 0;
+    max-width: 850px;
+    line-height: 1.6;
+
+    @include md {
+        font-size: 1.5rem;
+    }
+}
+
+.buttons {
+    display: flex;
+    gap: $space-4;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btnPrimary,
+.btnSecondary {
+    padding: $space-4 $space-6;
+    border-radius: $radius;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all $transition-default;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btnPrimary {
+    border: 1px solid $primary-foreground;
+    background: $primary-foreground;
+    color: $primary;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.btnSecondary {
+    border: 1px solid $primary-foreground;
+    background: transparent;
+    color: $primary-foreground;
+
+    &:hover {
+        background: rgba($primary-foreground, 0.1);
+        transform: translateY(-2px);
+    }
+}
+
+.scroll {
+    position: absolute;
+    bottom: $space-8;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+
+    span {
+        color: rgba($primary-foreground, 0.8);
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        animation: pulse 2s ease-in-out infinite;
+
+        .drownIcon {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 70vh;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+
+        a {
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+        }
+    }
+}

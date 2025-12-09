@@ -1,0 +1,176 @@
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_mixins.scss" as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: $secondary;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all $transition-default;
+}
+
+.container {
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 1rem $container-padding;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+// Logo
+.logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all $transition-default;
+    flex-shrink: 0;
+    height: 50px;
+    flex: 1;
+
+    img {
+        height: 100%;
+        width: auto;
+        max-width: 150px;
+    }
+
+    &:hover {
+        opacity: 0.85;
+    }
+}
+
+// Desktop Navigation
+.navDesktop {
+    display: flex;
+    align-items: center;
+    flex: 2;
+    
+    gap: 0.5rem;
+    margin-left: auto;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.navLink {
+    padding: 0.5rem 1rem;
+     color: $secondary-foreground;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all $transition-default;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $primary;
+        transition: width $transition-default;
+    }
+
+    &:hover {
+        color: $primary;
+
+        &::after {
+            width: 100%;
+        }
+    }
+    .drownIcon {
+        margin-left: 4px;
+        font-size: 0.75rem;
+    }
+}
+
+.ctaButton {
+    padding: 0.75rem 1.5rem;
+    background-color: $primary;
+    color: $primary-foreground;
+    border-radius: $radius-lg;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all $transition-default;
+    font-size: 0.95rem;
+    margin-left: 0.5rem;
+
+    &:hover {
+        background-color: $accent;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba($primary, 0.3);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+// Mobile Menu Toggle
+.mobileToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: $ring;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all $transition-default;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    &:hover {
+        color: $ring;
+    }
+}
+
+// Mobile Navigation
+.navMobile {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    @media (max-width: 768px) {
+        display: flex;
+    }
+}
+
+.navMobileOpen {
+    max-height: 400px;
+}
+
+.mobileLink {
+    padding: 1rem;
+    color: $foreground;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all $transition-default;
+
+    &:hover {
+        background-color: rgba($primary, 0.05);
+        color: $primary;
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+}

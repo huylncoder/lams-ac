@@ -1,0 +1,77 @@
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_mixins.scss" as *;
+
+.section {
+  padding: $space-16 $space-6;
+  background-color: $primary;
+
+  @include md {
+    padding: $space-20 $space-12;
+  }
+}
+
+.container {
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-family: $font-heading;
+  font-weight: 700;
+  color: $primary-foreground;
+  margin-bottom: $space-4;
+
+  @include md {
+    font-size: 2.25rem;
+  }
+}
+
+.description {
+  color: hsla(0, 0%, 100%, 0.8);
+  margin-bottom: $space-8;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+  max-width: 32rem;
+  margin: 0 auto;
+
+  @include sm {
+    flex-direction: row;
+  }
+}
+
+.input {
+  flex: 1;
+  height: 2.75rem;
+  padding: $space-2 $space-4;
+  font-size: 0.875rem;
+  font-family: $font-body;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
+  color: $primary-foreground;
+
+  &::placeholder {
+    color: hsla(0, 0%, 100%, 0.6);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: hsla(0, 0%, 100%, 0.5);
+  }
+}
+
+.button {
+  @include button-base;
+  background-color: $secondary;
+  color: $secondary-foreground;
+  padding: $space-3 $space-8;
+
+  &:hover {
+    background-color: $navy-light;
+  }
+}

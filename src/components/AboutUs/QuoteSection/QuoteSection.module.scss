@@ -1,0 +1,61 @@
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_mixins.scss" as *;
+
+.section {
+  padding: $space-16 $space-6;
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+
+  @include md {
+    padding: $space-24 $space-12;
+  }
+}
+
+.background {
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/anh3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quote {
+  font-size: 1.25rem;
+  color: #fff;
+  font-style: italic;
+  line-height: 1.7;
+
+  @include md {
+    font-size: 1.5rem;
+  }
+}
+
+.cite {
+  display: block;
+  margin-top: $space-6;
+  color: #fff;
+  font-family: $font-heading;
+  font-weight: 600;
+  font-style: normal;
+}

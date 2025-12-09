@@ -1,0 +1,92 @@
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_mixins.scss" as *;
+
+.section {
+    padding: $space-12 $space-6;
+    border-bottom: 1px solid $border;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include md {
+        padding: $space-12;
+    }
+}
+
+.container {
+    @include container;
+}
+
+.grid {
+    display: grid;
+
+    @include md {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.feature {
+    text-align: center;
+    padding: $space-8;
+    border-bottom: 1px solid $border;
+
+    @include md {
+        border-bottom: none;
+        border-right: 1px solid $border;
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.iconWrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 auto $space-4;
+    background-color: $muted;
+    border-radius: 50%;
+    @include flex-center;
+}
+
+.icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    color: $primary;
+    font-size: 1.75rem;
+}
+
+.title {
+    font-size: 1.125rem;
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $secondary;
+    margin-bottom: $space-2;
+}
+
+.description {
+    color: hsla(222, 47%, 11%, 0.7);
+    font-size: 0.875rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $primary;
+  color: $primary-foreground;
+  padding: $space-3 $space-8;
+  margin-top: $space-12;
+  font-weight: 500;
+  font-family: $font-body;
+  border: none;
+  cursor: pointer;
+  transition: background-color $transition-default;
+
+  &:hover {
+    background-color: $gold-dark;
+  }
+}

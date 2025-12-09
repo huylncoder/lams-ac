@@ -1,0 +1,92 @@
+// Colors
+$background: hsl(0, 0%, 100%);
+$foreground: hsl(222, 47%, 11%);
+
+$card: hsl(0, 0%, 100%);
+$card-foreground: hsl(222, 47%, 11%);
+
+$primary: hsl(36, 63%, 40%);
+$primary-foreground: hsl(0, 0%, 100%);
+
+$secondary: hsl(222, 47%, 11%);
+$secondary-foreground: hsl(0, 0%, 100%);
+
+$muted: hsl(45, 20%, 95%);
+$muted-foreground: hsl(222, 10%, 45%);
+
+$accent: hsl(36, 63%, 50%);
+$accent-foreground: hsl(0, 0%, 100%);
+
+$destructive: hsl(0, 84%, 60%);
+$destructive-foreground: hsl(0, 0%, 100%);
+
+$border: hsl(36, 20%, 85%);
+$input: hsl(36, 20%, 85%);
+$ring: hsl(36, 63%, 40%);
+
+// Custom colors
+$gold: hsl(36, 63%, 40%);
+$gold-light: hsl(36, 63%, 50%);
+$gold-dark: hsl(36, 63%, 30%);
+$navy: hsl(222, 47%, 11%);
+$navy-light: hsl(222, 35%, 20%);
+
+// Gradients
+$gradient-gold: linear-gradient(135deg, hsl(36, 63%, 40%), hsl(36, 63%, 55%));
+$gradient-dark: linear-gradient(180deg, hsl(222, 47%, 11%), hsl(222, 47%, 18%));
+$gradient-hero-overlay: linear-gradient(
+    90deg,
+    hsla(36, 50%, 30%, 0.85) 0%,
+    hsla(36, 40%, 25%, 0.6) 50%,
+    transparent 100%
+);
+
+// Shadows
+$shadow-card: 0 4px 20px hsla(222, 47%, 11%, 0.08);
+$shadow-card-hover: 0 8px 30px hsla(222, 47%, 11%, 0.12);
+$shadow-gold-glow: 0 0 40px hsla(36, 63%, 40%, 0.3);
+
+// Typography
+$font-heading: "Montserrat", sans-serif;
+$font-body: "Roboto", sans-serif;
+
+// Border radius
+$radius: 0.5rem;
+$radius-md: calc(0.5rem - 2px);
+$radius-sm: calc(0.5rem - 4px);
+$radius-lg: 1rem;
+$radius-2xl: 1.5rem;
+
+// Breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+$breakpoint-2xl: 1400px;
+
+// Container
+$container-max-width: 1400px;
+$container-padding: 1rem;
+
+// Spacing
+$space-1: 0.25rem;
+$space-2: 0.5rem;
+$space-3: 0.75rem;
+$space-4: 1rem;
+$space-5: 1.25rem;
+$space-6: 1.5rem;
+$space-8: 2rem;
+$space-10: 2.5rem;
+$space-12: 3rem;
+$space-16: 4rem;
+$space-20: 5rem;
+$space-24: 6rem;
+
+// Transitions
+$transition-fast: 0.15s ease;
+$transition-default: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Typography
+$heading-font-weight: 700;
+$body-font-weight: 400;
