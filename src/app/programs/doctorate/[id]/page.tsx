@@ -29,7 +29,7 @@ export default function DoctorateProgramPage({ params }: { params: { id: string 
             title={program.title}
             subtitle={program.subtitle}
             description={program.description}
-            fullDescription={program.fullDescription}
+            fullDescription={program.description}
             image={program.image}
             sections={program.sections}
             categoryTitle="Doctorate"
