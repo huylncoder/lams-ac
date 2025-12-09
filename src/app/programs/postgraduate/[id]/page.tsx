@@ -29,7 +29,7 @@ export default function PostgraduateProgramPage({ params }: { params: { id: stri
             title={program.title}
             subtitle={program.subtitle}
             description={program.description}
-            fullDescription={program.fullDescription}
+            fullDescription={program.description}
             image={program.image}
             sections={program.sections}
             categoryTitle="Postgraduate"
